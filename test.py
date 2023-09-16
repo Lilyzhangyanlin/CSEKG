@@ -30,12 +30,12 @@ from model import (
     LightGCN, CS_LightGCN_Imp, CS_LightGCN_Cls, 
     KGAT, CS_KGAT_Imp, CS_KGAT_Cls, 
     KGIN, CS_KGIN_Imp, CS_KGIN_Cls,
-    Ours_v3, KGCL, KGRec
+    CSEKG, KGCL, KGRec
 )
 from recbole.model.knowledge_aware_recommender import KGAT
 
 def run_recbole(
-    model_class=Ours_v3, 
+    model_class=CSEKG, 
     dataset=None, config_file_list=None, config_dict=None, saved=True, args=None
 ):
     # configurations initialization
@@ -100,10 +100,10 @@ def run_recbole(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
-    # parser.add_argument("--model", "-m", type=str, default="KGRec", help="name of models")
-    # parser.add_argument("--config_files", type=str, default="configs/kgrec.yaml", help="config files")
-    # parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
-    # parser.add_argument("--ckpt", type=str, default="saved/KGRec-Sep-14-2023_11-26-40.pth")
+    parser.add_argument("--model", "-m", type=str, default="KGRec", help="name of models")
+    parser.add_argument("--config_files", type=str, default="configs/kgrec.yaml", help="config files")
+    parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
+    parser.add_argument("--ckpt", type=str, default="saved/KGRec-Sep-14-2023_11-26-40.pth")
     # parser.add_argument("--dataset", "-d", type=str, default="ml-1m", help="name of datasets")
     # parser.add_argument("--ckpt", type=str, default="saved/KGRec-Sep-14-2023_11-34-07.pth")
 
@@ -118,10 +118,10 @@ if __name__ == "__main__":
     # parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
     # parser.add_argument("--ckpt", type=str, default="saved/mm/KGAT-Feb-06-2023_13-01-03.pth")
 
-    parser.add_argument("--model", "-m", type=str, default="KGIN", help="name of models")
-    parser.add_argument("--config_files", type=str, default="configs/kgin.yaml", help="config files")
-    parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
-    parser.add_argument("--ckpt", type=str, default="saved/mm/KGIN-Feb-06-2023_22-29-55.pth")
+    # parser.add_argument("--model", "-m", type=str, default="KGIN", help="name of models")
+    # parser.add_argument("--config_files", type=str, default="configs/kgin.yaml", help="config files")
+    # # parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
+    # # parser.add_argument("--ckpt", type=str, default="saved/mm/KGIN-Feb-06-2023_22-29-55.pth")
     # parser.add_argument("--dataset", "-d", type=str, default="amazon-book2", help="name of datasets")
     # parser.add_argument("--ckpt", type=str, default="saved/mm/KGIN-Feb-06-2023_22-47-59.pth")
 

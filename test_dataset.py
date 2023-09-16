@@ -26,72 +26,25 @@ class SplitDataset(KnowledgeBasedDataset):
         """
         self._change_feat_format()
 
-        if self.benchmark_filename_list is not None:
-            self._drop_unused_col()
-            cumsum = list(np.cumsum(self.file_size_list))
-            datasets = [
-                self.copy(self.inter_feat[start:end])
-                for start, end in zip([0] + cumsum[:-1], cumsum)
-            ]
-            return datasets
-
-        # ordering
-        # ordering_args = self.config["eval_args"]["order"]
-        # if ordering_args == "RO":
-        #     self.shuffle()
-        # elif ordering_args == "TO":
-        #     self.sort(by=self.time_field)
-        # else:
-        #     raise NotImplementedError(
-        #         f"The ordering_method [{ordering_args}] has not been implemented."
-        #     )
-        # 1] shuffle
+        # 1] ordering 根据时间/随机排序
         self.shuffle()
 
-        # splitting & grouping
+        # 2] splitting & grouping 根据用户/比例划分
         split_args = self.config["eval_args"]["split"]
-        # if split_args is None:
-        #     raise ValueError("The split_args in eval_args should not be None.")
-        # if not isinstance(split_args, dict):
-        #     raise ValueError(f"The split_args [{split_args}] should be a dict.")
-
-        # split_mode = list(split_args.keys())[0]
-        # assert len(split_args.keys()) == 1
-        # group_by = self.config["eval_args"]["group_by"]
-        # if split_mode == "RS":
-        #     if not isinstance(split_args["RS"], list):
-        #         raise ValueError(f'The value of "RS" [{split_args}] should be a list.')
-        #     if group_by is None or group_by.lower() == "none":
-        #         datasets = self.split_by_ratio(split_args["RS"], group_by=None)
-        #     elif group_by == "user":
-        #         datasets = self.split_by_ratio(
-        #             split_args["RS"], group_by=self.uid_field
-        #         )
-        #     else:
-        #         raise NotImplementedError(
-        #             f"The grouping method [{group_by}] has not been implemented."
-        #         )
-        # elif split_mode == "LS":
-        #     datasets = self.leave_one_out(
-        #         group_by=self.uid_field, leave_one_mode=split_args["LS"]
-        #     )
-        # else:
-        #     raise NotImplementedError(
-        #         f"The splitting_method [{split_mode}] has not been implemented."
-        #     )
-        # 
-        # 2] split
         datasets = self.split_by_ratio(split_args["RS"], group_by=self.uid_field)
         
-        self.split_nums = [7,15,48,2881]
+        # self.split_nums = [5,10,15,1564]
+        # self.split_nums = [5, 10, 48, 4475]
         # 构造不同分组的用户ID {uid: len(interns)}
-        uid2niterns = self.uid2inters(self.uid_field)
-        self.uid_splits = self.split_uids(uid2niterns, self.split_nums) # {uid: split_idx}
+        uid2niterns = self._get_uid_to_num_interactionss(self.uid_field)
+        self.split_nums = self._get_split_numbers(uid2niterns.values(), 6)
+        print(f"split_nums: {self.split_nums}")
+        self.uid_splits = self._split_uids_to_parts(uid2niterns, self.split_nums) # {uid: split_idx}
         
         # 仍然返回原本的三个 train/valid/test
         return datasets
 
-    def uid2inters(self, group_by):
+    def _get_uid_to_num_interactionss(self, group_by):
         index = {}
         group_by_list = self.inter_feat[group_by].numpy()
         for i, key in enumerate(group_by_list):
@@ -102,7 +55,15 @@ class SplitDataset(KnowledgeBasedDataset):
         index = {k:len(v) for k, v in index.items()}
         return index
 
-    def split_uids(self, uid2inters, split_nums):
+    def _get_split_numbers(self, counts, n_splits):
+        """ 对于所有用户交互counts, 排序, 划分成n_splits 份"""
+        counts = sorted(counts)
+        split_nums = []
+        for i in range(n_splits):
+            split_nums.append(counts[int(len(counts) * (i + 1) / n_splits) - 1])
+        return split_nums
+
+    def _split_uids_to_parts(self, uid2inters, split_nums):
         uid_splits = [[] for _ in range(len(split_nums))]
         for uid, cnt in uid2inters.items():
             for i, s in enumerate(split_nums):
@@ -110,7 +71,6 @@ class SplitDataset(KnowledgeBasedDataset):
                     uid_splits[i].append(uid)
                     break
         return uid_splits
-        
 
     def split_by_ratio(self, ratios, group_by=None):
         """Split interaction records by ratios.
@@ -229,43 +189,15 @@ def data_preparation_split(config, dataset: SplitDataset):
     )
     return train_dl, valid_dl, test_dls
     
-    # kg_sampler = KGSampler(
-    #     dataset,
-    #     config["train_neg_sample_args"]["distribution"],
-    #     config["train_neg_sample_args"]["alpha"],
-    # )
-    # train_sampler, valid_sampler, test_sampler = create_samplers(
-    #     config, dataset, built_datasets
-    # )
-    # train_data = get_dataloader(config, "train")(
-    #     config, train_dataset, train_sampler, kg_sampler, shuffle=True
-    # )
-    # valid_data = get_dataloader(config, "evaluation")(
-    #     config, valid_dataset, valid_sampler, shuffle=False
-    # )
-    # test_data = get_dataloader(config, "evaluation")(
-    #     config, test_dataset, test_sampler, shuffle=False
-    # )
-
-    # split_ds = dataset.get_split_testdata()
-    
-    # split_dls = []
-    # for ds in split_ds:
-    #     sampler = Sampler(['test'], ds, 'uniform', 1.0)
-    #     test_sampler = sampler.set_phase("test")
-    #     split_dls.append(
-    #         FullSortEvalDataLoader(config, ds, test_sampler, shuffle=False)
-    #     )
-
-    # return train_data, valid_data, test_data, split_dls
-
 
 
 if __name__=="__main__":
     config = Config(
         model=KGIN,
-        dataset="lfm-small",
-        config_file_list=["paras/kgcl.yaml"],
+        # dataset="lfm-small",
+        # dataset="ml-1m",
+        dataset="amazon-book2",
+        config_file_list=["configs/kgcl.yaml"],
         config_dict={"seed": 2023}
     )
     # dataset:KnowledgeBasedDataset = create_dataset(config)
@@ -275,8 +207,16 @@ if __name__=="__main__":
 
 
     dataset = SplitDataset(config=config)
-    test_dls = data_preparation_split(config, dataset)
-    dl = test_dls[0]
-    print(dl.uid2history_item)
-    dd = next(iter(dl))
-    print(dd)
+    train_dl, valid_dl, test_dls = data_preparation_split(config, dataset)
+    print(f"split_nums: {dataset.split_nums}")
+    print(f"len of test_dls: {[len(d) for d in test_dls]}")
+    # dl = test_dls[0]
+    # print(dl.uid2history_item)
+    # dd = next(iter(dl))
+    # print(dd)
+    
+""" 
+lfm: [9, 11, 14, 28]
+ml: [18, 39, 81, 908]
+book: [5, 7, 11, 4475]
+"""
