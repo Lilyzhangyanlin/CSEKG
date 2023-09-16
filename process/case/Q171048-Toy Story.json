@@ -1,0 +1,872 @@
+[
+  [
+    "G",
+    "film.content_rating.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story 2",
+    "film.film.prequel",
+    "Toy Story"
+  ],
+  [
+    "Randy Newman",
+    "film.music_contributor.film",
+    "Toy Story"
+  ],
+  [
+    "Ralph Eggleston",
+    "film.film_art_director.films_art_directed",
+    "Toy Story"
+  ],
+  [
+    "fantasy",
+    "film.film_genre.films_in_this_genre",
+    "Toy Story"
+  ],
+  [
+    "Lee Unkrich",
+    "film.editor.film",
+    "Toy Story"
+  ],
+  [
+    "Joss Whedon",
+    "film.writer.film",
+    "Toy Story"
+  ],
+  [
+    "buddy film",
+    "film.film_genre.films_in_this_genre",
+    "Toy Story"
+  ],
+  [
+    "animation",
+    "film.film_genre.films_in_this_genre",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.genre",
+    "comedy film"
+  ],
+  [
+    "Toy Story",
+    "film.film.story_by",
+    "Pete Docter"
+  ],
+  [
+    "Toy Story",
+    "film.film.story_by",
+    "Joe Ranft"
+  ],
+  [
+    "Toy Story",
+    "film.film.film_art_direction_by",
+    "Ralph Eggleston"
+  ],
+  [
+    "Toy Story",
+    "film.film.soundtrack",
+    null
+  ],
+  [
+    "Toy Story",
+    "film.film.genre",
+    "animation"
+  ],
+  [
+    "Toy Story",
+    "film.film.story_by",
+    "John Lasseter"
+  ],
+  [
+    "Toy Story",
+    "film.film.produced_by",
+    "Ralph Guggenheim"
+  ],
+  [
+    "Toy Story",
+    "film.film.country",
+    "United States of America"
+  ],
+  [
+    "Toy Story",
+    "film.film.edited_by",
+    null
+  ],
+  [
+    "Toy Story",
+    "film.film.edited_by",
+    "Lee Unkrich"
+  ],
+  [
+    "Toy Story",
+    "film.film.written_by",
+    "Andrew Stanton"
+  ],
+  [
+    "Toy Story",
+    "film.film.genre",
+    "buddy film"
+  ],
+  [
+    "Toy Story",
+    "film.film.production_companies",
+    "Walt Disney Pictures"
+  ],
+  [
+    "Toy Story",
+    "film.film.genre",
+    "adventure film"
+  ],
+  [
+    "Toy Story",
+    "film.film.written_by",
+    "Joss Whedon"
+  ],
+  [
+    "Toy Story",
+    "film.film.story_by",
+    "Andrew Stanton"
+  ],
+  [
+    "Toy Story",
+    "film.film.written_by",
+    "Alec Sokolow"
+  ],
+  [
+    "Toy Story",
+    "film.film.production_companies",
+    "Pixar"
+  ],
+  [
+    "Toy Story",
+    "film.film.soundtrack",
+    null
+  ],
+  [
+    "Toy Story",
+    "film.film.soundtrack",
+    null
+  ],
+  [
+    "Toy Story",
+    "film.film.sequel",
+    "Toy Story 2"
+  ],
+  [
+    "Toy Story",
+    "film.film.genre",
+    "children's film"
+  ],
+  [
+    "Toy Story",
+    "film.film.music",
+    "Randy Newman"
+  ],
+  [
+    "Toy Story",
+    "film.film.genre",
+    "fantasy"
+  ],
+  [
+    "Toy Story",
+    "film.film.written_by",
+    "Joel Cohen"
+  ],
+  [
+    "Toy Story",
+    "film.film.film_festivals",
+    "46th Berlin International Film Festival"
+  ],
+  [
+    "Toy Story",
+    "film.film.rating",
+    "G"
+  ],
+  [
+    "Toy Story",
+    "film.film.produced_by",
+    "Bonnie Arnold"
+  ],
+  [
+    "Toy Story",
+    "film.film.language",
+    "English"
+  ],
+  [
+    "Toy Story",
+    "film.film.executive_produced_by",
+    "Steve Jobs"
+  ],
+  [
+    "Toy Story",
+    "film.film.directed_by",
+    "John Lasseter"
+  ],
+  [
+    "Toy Story",
+    "film.film.executive_produced_by",
+    "Edwin Catmull"
+  ],
+  [
+    "children's film",
+    "film.film_genre.films_in_this_genre",
+    "Toy Story"
+  ],
+  [
+    "John Lasseter",
+    "film.director.film",
+    "Toy Story"
+  ],
+  [
+    null,
+    "film.editor.film",
+    "Toy Story"
+  ],
+  [
+    "Bonnie Arnold",
+    "film.producer.film",
+    "Toy Story"
+  ],
+  [
+    "comedy film",
+    "film.film_genre.films_in_this_genre",
+    "Toy Story"
+  ],
+  [
+    null,
+    "music.soundtrack.film",
+    "Toy Story"
+  ],
+  [
+    null,
+    "music.soundtrack.film",
+    "Toy Story"
+  ],
+  [
+    "Edwin Catmull",
+    "film.producer.films_executive_produced",
+    "Toy Story"
+  ],
+  [
+    "Ralph Guggenheim",
+    "film.producer.film",
+    "Toy Story"
+  ],
+  [
+    "adventure film",
+    "film.film_genre.films_in_this_genre",
+    "Toy Story"
+  ],
+  [
+    "Joel Cohen",
+    "film.writer.film",
+    "Toy Story"
+  ],
+  [
+    "46th Berlin International Film Festival",
+    "film.film_festival_event.films",
+    "Toy Story"
+  ],
+  [
+    "Andrew Stanton",
+    "film.writer.film",
+    "Toy Story"
+  ],
+  [
+    "Steve Jobs",
+    "film.producer.films_executive_produced",
+    "Toy Story"
+  ],
+  [
+    "Walt Disney Pictures",
+    "film.production_company.films",
+    "Toy Story"
+  ],
+  [
+    "Alec Sokolow",
+    "film.writer.film",
+    "Toy Story"
+  ],
+  [
+    "Pixar",
+    "film.production_company.films",
+    "Toy Story"
+  ],
+  [
+    null,
+    "music.soundtrack.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Shane Sweet"
+  ],
+  [
+    "Shane Sweet",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    null
+  ],
+  [
+    null,
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Scott McAfee"
+  ],
+  [
+    "Scott McAfee",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    null
+  ],
+  [
+    null,
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Debi Derryberry"
+  ],
+  [
+    "Debi Derryberry",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Erik von Detten"
+  ],
+  [
+    "Erik von Detten",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Don Rickles"
+  ],
+  [
+    "Don Rickles",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Joe Ranft"
+  ],
+  [
+    "Joe Ranft",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Sarah Freeman"
+  ],
+  [
+    "Sarah Freeman",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Debi Derryberry"
+  ],
+  [
+    "Debi Derryberry",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Philip Proctor"
+  ],
+  [
+    "Philip Proctor",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Sherry Lynn"
+  ],
+  [
+    "Sherry Lynn",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Jim Varney"
+  ],
+  [
+    "Jim Varney",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    null
+  ],
+  [
+    null,
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    null
+  ],
+  [
+    null,
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Jeff Pidgeon"
+  ],
+  [
+    "Jeff Pidgeon",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Greg Berg"
+  ],
+  [
+    "Greg Berg",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Tim Allen"
+  ],
+  [
+    "Tim Allen",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Laurie Metcalf"
+  ],
+  [
+    "Laurie Metcalf",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Jeff Pidgeon"
+  ],
+  [
+    "Jeff Pidgeon",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Tom Hanks"
+  ],
+  [
+    "Tom Hanks",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Andrew Stanton"
+  ],
+  [
+    "Andrew Stanton",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    null
+  ],
+  [
+    null,
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Patrick Pinney"
+  ],
+  [
+    "Patrick Pinney",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    null
+  ],
+  [
+    null,
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Philip Proctor"
+  ],
+  [
+    "Philip Proctor",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Jack Angel"
+  ],
+  [
+    "Jack Angel",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Danielle Judovits"
+  ],
+  [
+    "Danielle Judovits",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Bill Farmer"
+  ],
+  [
+    "Bill Farmer",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "John Morris"
+  ],
+  [
+    "John Morris",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Jack Angel"
+  ],
+  [
+    "Jack Angel",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Wallace Shawn"
+  ],
+  [
+    "Wallace Shawn",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Ryan O'Donohue"
+  ],
+  [
+    "Ryan O'Donohue",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Annie Potts"
+  ],
+  [
+    "Annie Potts",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Debi Derryberry"
+  ],
+  [
+    "Debi Derryberry",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Penn Jillette"
+  ],
+  [
+    "Penn Jillette",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    null
+  ],
+  [
+    null,
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Jan Rabson"
+  ],
+  [
+    "Jan Rabson",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    null
+  ],
+  [
+    null,
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "John Ratzenberger"
+  ],
+  [
+    "John Ratzenberger",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "R. Lee Ermey"
+  ],
+  [
+    "R. Lee Ermey",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    null
+  ],
+  [
+    null,
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.actor",
+    "Jeff Pidgeon"
+  ],
+  [
+    "Jeff Pidgeon",
+    "film.actor.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_nomination",
+    "MTV Movie Award for Best On-Screen Duo"
+  ],
+  [
+    "MTV Movie Award for Best On-Screen Duo",
+    "film.award_nomination.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_nomination",
+    null
+  ],
+  [
+    null,
+    "film.award_nomination.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_nomination",
+    "Hugo Award for Best Dramatic Presentation"
+  ],
+  [
+    "Hugo Award for Best Dramatic Presentation",
+    "film.award_nomination.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_nomination",
+    "Academy Award for Best Writing, Original Screenplay"
+  ],
+  [
+    "Academy Award for Best Writing, Original Screenplay",
+    "film.award_nomination.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_nomination",
+    "Kids' Choice Award for Favorite Movie"
+  ],
+  [
+    "Kids' Choice Award for Favorite Movie",
+    "film.award_nomination.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_nomination",
+    null
+  ],
+  [
+    null,
+    "film.award_nomination.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_nomination",
+    "BAFTA Award for Best Special Visual Effects"
+  ],
+  [
+    "BAFTA Award for Best Special Visual Effects",
+    "film.award_nomination.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_nomination",
+    null
+  ],
+  [
+    null,
+    "film.award_nomination.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_nomination",
+    null
+  ],
+  [
+    null,
+    "film.award_nomination.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_nomination",
+    "Academy Award for Best Original Musical or Comedy Score"
+  ],
+  [
+    "Academy Award for Best Original Musical or Comedy Score",
+    "film.award_nomination.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_nomination",
+    "Golden Globe Award for Best Motion Picture – Musical or Comedy"
+  ],
+  [
+    "Golden Globe Award for Best Motion Picture – Musical or Comedy",
+    "film.award_nomination.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_won",
+    "Special Achievement Academy Award"
+  ],
+  [
+    "Special Achievement Academy Award",
+    "film.award_won.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_won",
+    null
+  ],
+  [
+    null,
+    "film.award_won.film",
+    "Toy Story"
+  ],
+  [
+    "Toy Story",
+    "film.film.award_won",
+    null
+  ],
+  [
+    null,
+    "film.award_won.film",
+    "Toy Story"
+  ]
+]

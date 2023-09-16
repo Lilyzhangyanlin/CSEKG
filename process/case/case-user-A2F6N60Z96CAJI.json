@@ -1,0 +1,138 @@
+{
+  "uid": "A2F6N60Z96CAJI",
+  "items": [
+    [
+      "The Namesake",
+      "0006551807",
+      "m.076_r8",
+      "Q7753070"
+    ],
+    [
+      "Bloodline",
+      "0006175015",
+      "m.07xnnb",
+      "Q1317723"
+    ],
+    [
+      "Bloodline",
+      "0006175015",
+      "m.07xnnb",
+      "Q1317723"
+    ],
+    [
+      "Bloodline",
+      "0006175015",
+      "m.07xnnb",
+      "Q1317723"
+    ],
+    [
+      "The Torment of Others",
+      "0007190042",
+      "m.02rppk_",
+      "Q7769623"
+    ],
+    [
+      "Flashman on the March",
+      "000719739X",
+      "m.0cyjfp",
+      "Q5457656"
+    ],
+    [
+      null,
+      "0007267622",
+      "m.09gq32l",
+      null
+    ],
+    [
+      "Deeply Odd",
+      "0007327064",
+      "m.0vx858d",
+      "Q16385447"
+    ],
+    [
+      "Open. An Autobiography",
+      "0007281447",
+      "m.09kcbcq",
+      "Q3882880"
+    ],
+    [
+      "A Feast for Crows",
+      "0007447868",
+      "m.03cs21",
+      "Q1764445"
+    ],
+    [
+      "The Third Kingdom",
+      "0007493754",
+      "m.0wy0j0j",
+      "Q15033301"
+    ],
+    [
+      "Live by Night",
+      "0060004878",
+      "m.0n5zz7h",
+      "Q16386726"
+    ],
+    [
+      null,
+      "0060005556",
+      "m.04wdxk8",
+      null
+    ],
+    [
+      "Monstrous Regiment",
+      "0060013168",
+      "m.03z7xz",
+      "Q1637773"
+    ],
+    [
+      "Night Watch",
+      "0060013125",
+      "m.03222p",
+      "Q2410203"
+    ],
+    [
+      null,
+      "0060083816",
+      "m.0_0c5tp",
+      null
+    ],
+    [
+      null,
+      "0060159049",
+      "m.0wz0kmm",
+      null
+    ]
+  ],
+  "mid2wid": {
+    "m.076_r8": "Q7753070",
+    "m.07xnnb": "Q1317723",
+    "m.02rppk_": "Q7769623",
+    "m.0cyjfp": "Q5457656",
+    "m.09gq32l": null,
+    "m.0vx858d": "Q16385447",
+    "m.09kcbcq": "Q3882880",
+    "m.03cs21": "Q1764445",
+    "m.0wy0j0j": "Q15033301",
+    "m.0n5zz7h": "Q16386726",
+    "m.04wdxk8": null,
+    "m.03z7xz": "Q1637773",
+    "m.03222p": "Q2410203",
+    "m.0_0c5tp": null,
+    "m.0wz0kmm": null
+  },
+  "wid2name": {
+    "Q7753070": "The Namesake",
+    "Q1317723": "Bloodline",
+    "Q7769623": "The Torment of Others",
+    "Q5457656": "Flashman on the March",
+    "null": null,
+    "Q16385447": "Deeply Odd",
+    "Q3882880": "Open. An Autobiography",
+    "Q1764445": "A Feast for Crows",
+    "Q15033301": "The Third Kingdom",
+    "Q16386726": "Live by Night",
+    "Q1637773": "Monstrous Regiment",
+    "Q2410203": "Night Watch"
+  }
+}

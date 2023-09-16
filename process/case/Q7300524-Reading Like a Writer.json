@@ -1,0 +1,87 @@
+[
+  [
+    "Francine Prose",
+    "book.author.works_written",
+    "Reading Like a Writer"
+  ],
+  [
+    "composition",
+    "book.book_subject.works",
+    "Reading Like a Writer"
+  ],
+  [
+    "literary criticism",
+    "book.book_subject.works",
+    "Reading Like a Writer"
+  ],
+  [
+    "creative writing",
+    "book.book_subject.works",
+    "Reading Like a Writer"
+  ],
+  [
+    "Reading Like a Writer",
+    "book.written_work.subjects",
+    "writing"
+  ],
+  [
+    "Reading Like a Writer",
+    "book.written_work.subjects",
+    "creative writing"
+  ],
+  [
+    "Reading Like a Writer",
+    "book.written_work.original_language",
+    "English"
+  ],
+  [
+    "Reading Like a Writer",
+    "book.book.genre",
+    "nonfiction"
+  ],
+  [
+    "Reading Like a Writer",
+    "book.written_work.subjects",
+    "classics"
+  ],
+  [
+    "Reading Like a Writer",
+    "book.written_work.subjects",
+    "composition"
+  ],
+  [
+    "Reading Like a Writer",
+    "book.written_work.subjects",
+    "literary criticism"
+  ],
+  [
+    "Reading Like a Writer",
+    "book.written_work.subjects",
+    "literature"
+  ],
+  [
+    "Reading Like a Writer",
+    "book.written_work.author",
+    "Francine Prose"
+  ],
+  [
+    "literature",
+    "book.book_subject.works",
+    "Reading Like a Writer"
+  ],
+  [
+    "nonfiction",
+    "media_common.literary_genre.books_in_this_genre",
+    "Reading Like a Writer"
+  ],
+  [
+    "writing",
+    "book.book_subject.works",
+    "Reading Like a Writer"
+  ],
+  [
+    "classics",
+    "book.book_subject.works",
+    "Reading Like a Writer"
+  ]
+]
