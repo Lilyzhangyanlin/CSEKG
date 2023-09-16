@@ -53,8 +53,7 @@ from model import (
     CSEKG, 
     KGCL, KGRec
 )
-# from model import *
-# from cls import create_cluster_dataset, KBClusterDataset
+from cls import create_cluster_dataset, KBClusterDataset
 
 
 def run_recbole(
@@ -83,8 +82,8 @@ def run_recbole(
     logger.info(config)
 
     # dataset filtering
-    dataset:KnowledgeBasedDataset = create_dataset(config)
-    # dataset:KBClusterDataset = create_cluster_dataset(config)
+    # dataset:KnowledgeBasedDataset = create_dataset(config)
+    dataset:KBClusterDataset = create_cluster_dataset(config)
     logger.info(dataset)
     # dataset splitting
     train_data, valid_data, test_data = data_preparation(config, dataset)
@@ -131,8 +130,8 @@ def run_recbole(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
-    # parser.add_argument("--dataset", "-d", type=str, default="ml-1m", help="name of datasets")
+    # parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
+    parser.add_argument("--dataset", "-d", type=str, default="ml-1m", help="name of datasets")
 
     # LGCN
     # parser.add_argument("--model", "-m", type=str, default="CS_LightGCN_Cls", help="name of models")
@@ -144,13 +143,13 @@ if __name__ == "__main__":
     # parser.add_argument("--model", "-m", type=str, default="CS_KGIN_Imp", help="name of models")
     # parser.add_argument("--config_files", type=str, default="configs/kgin.yaml", help="config files")
     # Ours
-    # parser.add_argument("--model", "-m", type=str, default="Ours_v3", help="name of models")
-    # parser.add_argument("--config_files", type=str, default="configs/ours.yaml", help="config files")
+    parser.add_argument("--model", "-m", type=str, default="CSEKG", help="name of models")
+    parser.add_argument("--config_files", type=str, default="configs/csekg.yaml", help="config files")
     # IMP 计算方式: ui 计算交互数量; all; random; kg KG 上的度数
     # parser.add_argument("--imp_mode", type=str, default="ui", choices=['ui', 'kg', 'none', 'random'])
 
-    parser.add_argument("--model", "-m", type=str, default="KGCL", help="name of models")
-    parser.add_argument("--config_files", type=str, default="configs/kgcl.yaml", help="config files")
+    # parser.add_argument("--model", "-m", type=str, default="KGCL", help="name of models")
+    # parser.add_argument("--config_files", type=str, default="configs/kgcl.yaml", help="config files")
 
 
     args, _ = parser.parse_known_args()
