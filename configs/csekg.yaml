@@ -1,0 +1,86 @@
+
+# recbole/properties/overall.yaml
+
+# dataset config : Knowledge-based Recommendation
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+HEAD_ENTITY_ID_FIELD: head_id
+TAIL_ENTITY_ID_FIELD: tail_id
+RELATION_ID_FIELD: relation_id
+ENTITY_ID_FIELD: entity_id
+load_col:
+    inter: [user_id, item_id]
+    kg: [head_id, relation_id, tail_id]
+    link: [item_id, entity_id]
+# benchmark_filename: ['train', 'valid', 'test']
+
+# model config
+embedding_size: 64
+kg_embedding_size: 64
+reg_weights: [1e-02,1e-02]
+
+# Training and evaluation config
+epochs: 1000 #训练的最大轮数
+train_batch_size: 2048 #训练的batch_size
+eval_batch_size: 4096
+learner: adam     #使用的pytorch内置优化器
+learning_rate: 0.0001 #学习率
+# training_neg_sample_num: 1 #负采样数目
+eval_step: 1      #每次训练后做evalaution的次数
+stopping_step: 30 #控制训练收敛的步骤数，在该步骤数内若选取的评测标准没有什么变化，就可以提前停止了
+
+# eval_setting: RO_RS,full #对数据随机重排，按比例划分数据集，并使用全排序
+eval_args:
+   split: {'RS': [0.8, 0.1, 0.1]}
+   group_by: user
+   order: RO
+   mode: full
+metrics: ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision']
+topk: [20]
+valid_metric: Recall@20
+
+# envronment
+# gpu_id: 0
+# log_wandb: True
+
+
+
+# quck_start_config/knowledge_base.yaml
+# Data preprocessing for knowledge graph triples
+kg_reverse_r: False                     # (bool) Whether to reverse relations of triples for bidirectional edges.
+entity_kg_num_interval: "[0,inf)"       # (str) Entity interval for filtering kg.
+relation_kg_num_interval: "[0,inf)"     # (str) Relation interval for filtering kg.
+
+
+# model: Ours
+# 默认值为
+embedding_size: 64              # (int) The embedding size of users, items, entities and relations.
+reg_weight: 1e-5                # (float) The zL2 regularization weight.
+node_dropout_rate: 0.5          # (float) The node dropout rate in GCN layer.
+mess_dropout_rate: 0.0          # (float) The message dropout rate in GCN layer.
+sim_regularity: 1e-4            # (float) The intents independence loss weight.
+context_hops: 2                 # (int) The number of context hops in GCN layer.
+ind: 'cosine'                   # (float) The intents independence loss type. # distance, cosine
+
+# ======= CLS
+n_clusters: 4
+cls_mode: pretrained
+cls_emb_model: ENMF
+
+# IMP 计算方式: same; random; kg KG 上的度数; ui 计算交互数量
+imp_mode: same
+# IMP 是否参与训练
+imp_fixed: False
+# 用户聚合方式: inter_cls 在UI交互的基础上, 引入物品聚类结果; inter_nocls 仅使用UI交互
+u_mode: inter_cls
+# 节点聚合方式: att_imp 注意力方案, 加入重要性度量; att_noimp
+e_mode: att_imp
+
+# ===== DATA
+data_path: dataset/
+# dataset: ml-1m
+# save_dataset: True
+# dataset_save_path: 
+
+# =========== DIR
+checkpoint_dir: saved/

@@ -1,0 +1,53 @@
+
+# dataset config : Knowledge-based Recommendation
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+HEAD_ENTITY_ID_FIELD: head_id
+TAIL_ENTITY_ID_FIELD: tail_id
+RELATION_ID_FIELD: relation_id
+ENTITY_ID_FIELD: entity_id
+load_col:
+    inter: [user_id, item_id]
+    kg: [head_id, relation_id, tail_id]
+    link: [item_id, entity_id]
+# benchmark_filename: ['train', 'valid', 'test']
+
+
+# Training and evaluation config
+epochs: 1000 #训练的最大轮数
+train_batch_size: 2048 #训练的batch_size
+eval_batch_size: 4096
+learner: adam     #使用的pytorch内置优化器
+learning_rate: 0.0001 #学习率
+# training_neg_sample_num: 1 #负采样数目
+eval_step: 1      #每次训练后做evalaution的次数
+stopping_step: 30 #控制训练收敛的步骤数，在该步骤数内若选取的评测标准没有什么变化，就可以提前停止了
+
+# eval_setting: RO_RS,full #对数据随机重排，按比例划分数据集，并使用全排序
+eval_args:
+   split: {'RS': [0.8, 0.1, 0.1]}
+   group_by: user
+   order: RO
+   mode: full
+metrics: ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision']
+topk: [20]
+valid_metric: Recall@20
+
+train_batch_size: 8192
+eval_batch_size: 40960
+
+# ==================== model config
+embedding_size: 64              # (int) The embedding size of users, items, entities and relations.
+reg_weight: 1e-5                # (float) The L2 regularization weight.
+node_dropout_rate: 0.5          # (float) The node dropout rate in GCN layer.
+mess_dropout_rate: 0.0          # (float) The message dropout rate in GCN layer.
+sim_regularity: 1e-4            # (float) The intents independence loss weight.
+context_hops: 2                 # (int) The number of context hops in GCN layer.
+n_factors: 4                    # (int) The number of user intents.
+ind: 'cosine'                   # (float) The intents independence loss type.
+temperature: 0.2                # (float) The temperature parameter used in loss calculation.
+
+# ======= CLS
+n_clusters: 4
+cls_mode: pretrained
+cls_emb_model: ENMF

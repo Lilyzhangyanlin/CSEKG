@@ -1,0 +1,15 @@
+embedding_size: 64              # (int) The embedding size of user. 
+dropout_prob: 0.7               # (float) The dropout ratio of the embedding.
+reg_weight: 0.0                 # (float) L2-regularization weight.
+negative_weight: 0.5            # (float) The weight of non-observed data.
+
+# Training and evaluation config
+epochs: 100 # 训练的最大轮数
+train_batch_size: 20480 # 训练的batch_size
+eval_batch_size: 40960
+# learner: adam     #使用的pytorch内置优化器
+# learning_rate: 0.0001 #学习率
+# training_neg_sample_num: 1 #负采样数目
+# eval_step: 10      #每次训练后做evalaution的次数
+# stopping_step: 10 #控制训练收敛的步骤数，在该步骤数内若选取的评测标准没有什么变化，就可以提前停止了
+
