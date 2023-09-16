@@ -1,0 +1,17 @@
+data/
+log/
+log_tensorboard/
+saved/
+dataset/
+tmp/
+SAKG-result/
+/SSLRec
+/STGAT/
+/ref
+
+.DS_Store
+__pycache__/
+.ipynb_checkpoints
+*.ipynb
+*.pdf
+*.zip

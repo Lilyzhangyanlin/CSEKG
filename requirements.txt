@@ -1,0 +1,11 @@
+
+# 用spec-list安装漏掉的 pip包
+# pydantic
+# scikit-learn
+# tqdm 
+# prettytable 
+# tensorboardX
+# pandas
+# pyyaml
+
+recbole
