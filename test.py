@@ -102,16 +102,22 @@ if __name__ == "__main__":
 
     parser.add_argument("--model", "-m", type=str, default="KGRec", help="name of models")
     parser.add_argument("--config_files", type=str, default="configs/kgrec.yaml", help="config files")
-    parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
-    parser.add_argument("--ckpt", type=str, default="saved/KGRec-Sep-14-2023_11-26-40.pth")
+    # parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
+    # parser.add_argument("--ckpt", type=str, default="saved/KGRec-Sep-14-2023_11-26-40.pth")
     # parser.add_argument("--dataset", "-d", type=str, default="ml-1m", help="name of datasets")
     # parser.add_argument("--ckpt", type=str, default="saved/KGRec-Sep-14-2023_11-34-07.pth")
+    parser.add_argument("--dataset", "-d", type=str, default="amazon-book2", help="name of datasets")
+    parser.add_argument("--ckpt", type=str, default="saved/KGRec-Sep-14-2023_17-04-27.pth")
 
 
     # parser.add_argument("--model", "-m", type=str, default="KGCL", help="name of models")
     # parser.add_argument("--config_files", type=str, default="configs/kgcl.yaml", help="config files")
     # parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
     # parser.add_argument("--ckpt", type=str, default="saved/KGCL-Sep-13-2023_21-19-17.pth")
+    # parser.add_argument("--dataset", "-d", type=str, default="amazon-book2", help="name of datasets")
+    # parser.add_argument("--ckpt", type=str, default="saved/KGCL-Sep-14-2023_04-04-51.pth")
+
+    
 
     # parser.add_argument("--model", "-m", type=str, default="KGAT", help="name of models")
     # parser.add_argument("--config_files", type=str, default="configs/kgat.yaml", help="config files")
@@ -120,8 +126,8 @@ if __name__ == "__main__":
 
     # parser.add_argument("--model", "-m", type=str, default="KGIN", help="name of models")
     # parser.add_argument("--config_files", type=str, default="configs/kgin.yaml", help="config files")
-    # # parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
-    # # parser.add_argument("--ckpt", type=str, default="saved/mm/KGIN-Feb-06-2023_22-29-55.pth")
+    # parser.add_argument("--dataset", "-d", type=str, default="lfm-small", help="name of datasets")
+    # parser.add_argument("--ckpt", type=str, default="saved/mm/KGIN-Feb-06-2023_22-29-55.pth")
     # parser.add_argument("--dataset", "-d", type=str, default="amazon-book2", help="name of datasets")
     # parser.add_argument("--ckpt", type=str, default="saved/mm/KGIN-Feb-06-2023_22-47-59.pth")
 
